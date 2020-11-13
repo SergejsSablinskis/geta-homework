@@ -1,0 +1,11 @@
+1) countyList and data for ContactPerson list init I would move to model layer, or even better, moved to database, for now assume that data stored as contactPersonInitData
+2) I would add Linq to using list for next step
+3) contactPersonList filling I would changed to contactPersonInitData.Select(x => new ContactPerson {
+		Municipality = x.Municipality,
+		County = x.County,
+		Email = x.Email
+	}) - it that way it more readable and easy to add changes. Or here may be used foreach cycle.
+	
+4) Some methods have annotation and some don't. I would add annotation to methods that don't have it - should be in one style
+5) public class ContactPerson would moved it to model layer, why that class is here?
+6) protected static methods I would moved to some static Helper class, in this case, #region Language handling methods I would move to helpers/Locale.cs

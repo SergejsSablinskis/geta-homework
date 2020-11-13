@@ -1,0 +1,4 @@
+1) Search input and button I would move to be just under breadcrumb somewhere about max-width: 1365, maybe earlier if breadcrumb will be larger on some page.
+2) Main header navigation I would put in "hamburger popover"
+3) Left sidebar and title name I would move to be just over main content, in the same line with hamburger. Inline. If their quanity may be larger than in example, then in popover too, with button "Actions".
+4) Bottom links block I would change to vertical position.

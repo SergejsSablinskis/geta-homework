@@ -1,0 +1,29 @@
+.content {
+    text-align: center;
+    
+}
+
+.main {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    padding: 5px;
+    margin: 5px;
+    background-color: #eeeeee;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #555555;    
+}
+
+.card > img {
+    max-height: 350px;
+    max-width: 300px;
+}
+
+.paginator-button {
+    cursor: pointer;
+    margin: 5px;
+}

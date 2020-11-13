@@ -11,7 +11,7 @@ class ApiConnector {
     constructor(url = "http://www.omdbapi.com/", apiKey = "52c2b83") {
         this.apiKey = apiKey;
         this.url = url;
-        this.setup()
+        this.setup();
     }
 
     setup() {
@@ -53,16 +53,18 @@ class App {
                 currentHtml += this.prepareItemCard(item);
             });
             this.container.innerHTML = currentHtml;
-            this.preparePaginator(this.apiConnector.getMaxPagesCount())
+            this.preparePaginator(this.apiConnector.getMaxPagesCount());
         })
     }
 
     prepareItemCard(item) {
         return `<div class="card">
-                    <h3>${item.Title}</h3>
-                    ${item.Poster !== "N/A"? '<img src="'+ item.Poster + '"/>' : ''}
-                    <p>${item.Type}</p>
-                </div>`
+                    <div class="card-content">
+                        <h3>${item.Title}</h3>
+                        ${item.Poster !== "N/A"? '<img src="'+ item.Poster + '"/>' : ''}
+                        <p>${item.Type}</p>
+                    </div>
+                </div>`;
     }
 
     preparePaginator(maxPages) {
